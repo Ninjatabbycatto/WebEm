@@ -3,6 +3,12 @@ body{
 
 }
 
+.container {
+    display: flex;
+    align-items: flex-start; /* Aligns items at the top */
+    height: 100vh;
+}
+
 #leftPanel {
     color: white;
     display: flex;
@@ -10,7 +16,6 @@ body{
     margin-left: 3vw;
     height: 100%;
     width: 17vw;
-
 }
 
 .webEm-logo {
@@ -38,13 +43,72 @@ body{
 .regularpanel {
     margin-top: 1.5vw;
     display: flex;
-
 }
 
 .icon {
     margin-left: 2vw; 
     margin-top: 0.7vw;
 }
+
 svg {
     margin-left: 1vw;
+}
+
+.toppaddeddiv {
+    display: flex;
+    padding-top: 20px;
+}
+
+.rightPanel {
+    flex: 1;
+}
+
+.rightPanelRectangle {
+    flex-grow: 1;
+    height: 100vh;
+    border-radius: 20px;
+    background: #676767;
+    padding: 30px;
+    margin: 3vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.rightPanelRectangle::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #37476D;
+}
+
+.topColumnContainer {
+    display: flex;
+}
+
+#topColumnDateAndTime {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 10px
+}
+
+#topColumnProfile {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-grow: 8;
+}
+
+.profileCircle {
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.space {
+    width:500px;
 }
