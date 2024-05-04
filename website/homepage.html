@@ -82,19 +82,93 @@
     <div class = "rightPanel">
         <!--Main Panel-->
         <div class = "rightPanelRectangle">
-            <div class = "topColumnContainer">
-                <div id = "topColumnDateAndTime">
-                    <h1>Tuesday</h1>
-                </div>
-                    <!---->
-                    <div id = "topColumnProfile">
-                        <span class = "space"></span>
-                        <h1>Juan De La Cruz</h1><br>
-                        <span class = "profileCircle"></span>
+            <div class = "panelContainer">
+                <div class = "leftColumnWrapper">
+                    <div class = "leftColumn">
+                        <div>
+                            <h1 id = "DotWHeader">Day of the Week</h1>
+                            <div>November 1, 2023</div>
+                        </div>
+                        <div id = "objectivesPanel">
+                            <div id = "objectivesPanelTopRow">
+                                <div><h1 style="margin: 0;">Objectives</h1></div>
+                                <div><img src = "assets/calendar.png"></div>
+                            </div>
+                                <hr>
+                            <div id = "objectiveInstanceWrapper">
+                                <div id = "objectiveInstance">
+                                    <div id = "actualObjectiveInstance">
+                                        <input type = "checkbox" id = "objective" name = "objective">
+                                            <div id = "objectiveInstanceText">
+                                                <label for = "objective">Objective 1</label>
+                                                <div>November 12, 2024 10:00am</div>
+                                                <div>John Doe, Role</div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <div class = "rightColumnWrapper">
+                        <div class = "rightColumn">
+                            <div id = "profile">
+                                <img src = "assets/example_profile.jpg" id = "profilePicture">
+                                <div style = "margin-left: 20px;">
+                                    <h1 style = "margin-bottom: 0;">Juan De La Cruz</h1>
+                                    <p style = "margin: 0;">Manager</p>
+                                </div>
+                            </div>
+
+                                <div id="notificationWrapper">
+                                    <div id = "notificationHeader">
+                                        <div>Notification</div>
+                                        <div>9:23 AM</div>
+                                    </div>
+                                    <div id = "notificationContent">
+                                        <div>Notification content</div>
+                                    </div>
+                                </div>
+
+                                <div id = "recentAnnouncementsWrapper">
+                                    <div id = "recentAnnouncementsHeader">
+                                        <div><h2 style="margin: 0;">Recent Announcements</h2></div>
+                                        <img src = "assets/upright_arrow.png">
+                                    </div>
+                                        <div id = "notificationHeader">John Doe, Semptember 12, 2024</div>
+                                        <div>Announcement Content</div>
+                                </div>
+
+                                <div id = "personalTasksPanel">
+                                    <div id = "personalTasksTopRow">
+                                        <div><h1 style="margin: 0;">Personal Tasks</h1></div>
+                                        <img src = "assets/write.png">
+                                    </div>
+                                        <hr>
+                                    <div id = "objectiveInstanceWrapper">
+                                        <div id = "objectiveInstance">
+                                            <div id = "actualObjectiveInstance">
+                                                <input type = "checkbox" id = "objective" name = "objective">
+                                                <div id = "objectiveInstanceText">
+                                                    <label for = "objective">Objective 1</label>
+                                                    <div>November 12, 2024 10:00am</div>
+                                                    <div>John Doe, Role</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+                <div>
+                    footer
+                </div>
         </div>
     </div>
+</div>
 
 </div>
   </body>
