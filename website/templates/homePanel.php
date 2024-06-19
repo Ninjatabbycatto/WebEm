@@ -29,24 +29,23 @@
 
         <div>
         </br>
-        </br>
         </div>
         
-        <div class="regularpanel">
+        <div class="regularpanel" id = "homeButton">
             <svg  xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 17 17"  width="2.5vw" height="2.5vw">
                 <path d="M8.543 2.232a.75.75 0 0 0-1.085 0l-5.25 5.5A.75.75 0 0 0 2.75 9H4v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V9h1.25a.75.75 0 0 0 .543-1.268l-5.25-5.5Z" />
             </svg>
             <p class="icon">Home</p>
         </div>
 
-        <div class="regularpanel">
+        <div class="regularpanel" id = "employeesButton">
             <svg  xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 26 26"  width="2.5vw" height="2.5vw">
                 <path fillRule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clipRule="evenodd" />
             </svg>
             <p class="icon">Employees</p>
         </div>
         
-        <div class="regularpanel">
+        <div class="regularpanel" id = "workplaceButton">
             <svg  xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 26 26"  width="2.5vw" height="2.5vw">
                 <path d="M19.006 3.705a.75.75 0 1 0-.512-1.41L6 6.838V3a.75.75 0 0 0-.75-.75h-1.5A.75.75 0 0 0 3 3v4.93l-1.006.365a.75.75 0 0 0 .512 1.41l16.5-6Z" />
                 <path fillRule="evenodd" d="M3.019 11.114 18 5.667v3.421l4.006 1.457a.75.75 0 1 1-.512 1.41l-.494-.18v8.475h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3v-9.129l.019-.007ZM18 20.25v-9.566l1.5.546v9.02H18Zm-9-6a.75.75 0 0 0-.75.75v4.5c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75H9Z" clipRule="evenodd" />
@@ -78,25 +77,8 @@
             <p class="icon">Bulletin</p>
         </div>
     </div>
-
-    <div class = "rightPanel">
-        <!--Main Panel-->
-        <div class = "rightPanelRectangle">
-            <div class = "topColumnContainer">
-                <div id = "topColumnDateAndTime">
-                    <h1>Tuesday</h1>
-                </div>
-                    <!---->
-                    <div id = "topColumnProfile">
-                        <span class = "space"></span>
-                        <h1>Juan De La Cruz</h1><br>
-                        <span class = "profileCircle"></span>
-                    </div>
-            </div>
-        </div>
-    </div>
+            <?php require "templates/homeRightPanel.php";?>
 
 </div>
   </body>
 </html>
-  

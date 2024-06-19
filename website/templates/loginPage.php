@@ -24,7 +24,7 @@
     <div class="center">
       <div class="loginBox">
         <p id="Login" class="roboto-medium">Login</p>
-        <form class="roboto-light">
+        <form class="roboto-light" method="POST">
           <div class="formElement">
             <label for="uName">Username</label><br>
             <input type="text" id="uName" name="uName"><br>
@@ -32,8 +32,6 @@
           <div class="formElement">
             <label for="pass">Password</label><br>
             <input type="password" id="pass" name="pass">
-
-            
           </div>
           <div class="formElement center">
             <input type="submit" value="log in">

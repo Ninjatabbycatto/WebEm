@@ -65,7 +65,7 @@ svg {
 
 .rightPanelRectangle {
     flex-grow: 1;
-    height: 100vh;
+    height: 100%;
     border-radius: 20px;
     background: #676767;
     padding: 30px;
