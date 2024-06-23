@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+
+
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WebEM User</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/Fonts/roboto.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-  </head>
-  <body class="roboto-light">
-
-<div class = "container">
     <div id="leftPanel">
         <div class="webEm-logo">
             <h1>WebEm</h1>
@@ -61,7 +46,7 @@
             <p class="icon">Calendar</p>
         </div>
 
-        <div class="regularpanel">
+        <div class="regularpanel" id = "notesButton">
             <svg  xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 22 22"  width="2.5vw" height="2.5vw">
                 <path d="m5.433 13.917 1.262-3.155A4 4 0 0 1 7.58 9.42l6.92-6.918a2.121 2.121 0 0 1 3 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 0 1-.65-.65Z" />
                 <path d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0 0 10 3H4.75A2.75 2.75 0 0 0 2 5.75v9.5A2.75 2.75 0 0 0 4.75 18h9.5A2.75 2.75 0 0 0 17 15.25V10a.75.75 0 0 0-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5Z" />
@@ -77,8 +62,4 @@
             <p class="icon">Bulletin</p>
         </div>
     </div>
-            <?php require "templates/homeRightPanel.php";?>
-
-</div>
-  </body>
-</html>
+            

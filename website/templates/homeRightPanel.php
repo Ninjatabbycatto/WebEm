@@ -1,4 +1,4 @@
-<div class = "rightPanel">
+
         <!--Main Panel-->
         <div class = "rightPanelRectangle">
             <div class = "topColumnContainer">
@@ -13,4 +13,3 @@
                     </div>
             </div>
         </div>
-    </div>

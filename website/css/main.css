@@ -59,16 +59,18 @@ svg {
     padding-top: 20px;
 }
 
-.rightPanel {
+#rightPanel {
     flex: 1;
+    width: 100%;
 }
 
 .rightPanelRectangle {
     flex-grow: 1;
     height: 100%;
+    width: 77vw;
     border-radius: 20px;
     background: #676767;
-    padding: 30px;
+    /*padding: 30px;*/
     margin: 3vh;
     overflow: hidden;
     position: relative;
