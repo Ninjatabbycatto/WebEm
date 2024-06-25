@@ -6,7 +6,7 @@ body{
 .container {
     display: flex;
     align-items: flex-start; /* Aligns items at the top */
-    height: 100vh;
+    height: 98vh;
 }
 
 #leftPanel {
@@ -66,10 +66,10 @@ svg {
 
 .rightPanelRectangle {
     flex-grow: 1;
-    height: 100%;
+    height: 93%;
     width: 77vw;
     border-radius: 20px;
-    background: #676767;
+    background: #e2e2e2;
     /*padding: 30px;*/
     margin: 3vh;
     overflow: hidden;
@@ -83,7 +83,6 @@ svg {
     left: 0;
     width: 100%;
     height: 30%;
-    background-color: #37476D;
 }
 
 .topColumnContainer {
@@ -93,6 +92,7 @@ svg {
 #topColumnDateAndTime {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-right: 10px
 }
@@ -100,6 +100,7 @@ svg {
 #topColumnProfile {
     display: flex;
     flex-direction: row-reverse;
+    align-content: flex-end;
     flex-wrap: wrap;
     flex-grow: 8;
 }
@@ -109,8 +110,122 @@ svg {
     width: 100px;
     background-color: #bbb;
     border-radius: 50%;
-    margin-right: 10px;
+    align-items: flex-start;
 }
 .space {
     width:500px;
+}
+
+#HomeContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#HomeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#HomeDates {
+    padding: 2.2vw;
+    margin-left: 1.5vw;
+}
+
+#HomeDates h1 {
+    margin-left: 3vw;
+    font-size: 3.5vw;
+    margin: 0;
+}
+#HomeDates p {
+    font-size: 1.25vw;
+    margin: 0;
+    margin-left: 0.4vw;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 18vw;
+    margin-right: 3vw;
+}
+
+#profile h1 {
+    margin: 0;
+    font-size: 1.25vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#profile p {
+    font-size: 0.9vw;
+    margin: 0;
+}
+.profile-picture {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+#HomeBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+#Objectives {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 30vw;
+    width: 24vw;
+    background-color: rgb(49, 49, 49);
+    border-radius: 17px;
+    margin-left: 7vw;
+}
+
+
+#ObjHeader {
+    color: #e2e2e2;
+    border-bottom: 0.5px solid #e2e2e2;
+    width: 100%;
+    align-content: center;
+    size: 2vw;
+}
+
+#ObjHeader p {
+    margin-bottom: 1.5vh;
+    margin-left: 2vw;
+}
+
+.ObjContainer {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 8vh;
+    border-bottom: solid 0.5px #6e6e6e;
+}
+
+.checkbox-input {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+
+}
+.ObjTextContainer {
+    color: #e2e2e2;
+}
+
+.ObjTextContainer h5{
+    color: #e2e2e2;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.ObjTextContainer p{
+    margin: 0;
+    font-size: 0.75vw;
 }
