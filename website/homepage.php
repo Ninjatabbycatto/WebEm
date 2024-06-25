@@ -44,7 +44,6 @@
                         }
                     });
                 });
-
                 $('#notesButton').click(function() {
                     $.ajax({
                         url: 'backend/action.php',

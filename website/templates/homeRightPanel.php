@@ -1,15 +1,39 @@
 
         <!--Main Panel-->
+
         <div class = "rightPanelRectangle">
-            <div class = "topColumnContainer">
-                <div id = "topColumnDateAndTime">
-                    <h1>Tuesday</h1>
-                </div>
-                    <!---->
-                    <div id = "topColumnProfile">
-                        <span class = "space"></span>
-                        <h1>Juan De La Cruz</h1><br>
-                        <span class = "profileCircle"></span>
+            <div id="HomeContainer">
+                
+                <div id = "HomeHeader">
+                    <div id="HomeDates">
+                        <h1> Tuesday <br></h1>
+                        <p>November 12, 2024</p>
                     </div>
+                    <div id="profile">
+                        <div id="picture">
+                            <img id="profilePicture" class="profile-picture" src="" alt="Profile Picture">
+                            <script>
+                                document.getElementById('profilePicture').src = 'path/to/profile-picture.jpg'; // Update the path accordingly
+                            </script>
+                        </div>
+                        <div id="texts">
+                            <h1> Juan Dela Cruz <br></h1>
+                            <p>Software Developer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="HomeBody">
+                    <div class="roboto-medium" id="Objectives">
+                        <div id="ObjHeader">
+                            <p>Objectives</p>
+                        </div>
+                        <?php
+                            require "templates/ObjectiveItem.php";
+                            require "templates/ObjectiveItem.php";
+                            require "templates/ObjectiveItem.php";
+                        ?>
+                    </div>
+                </div>
             </div>
         </div>
