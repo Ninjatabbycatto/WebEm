@@ -65,25 +65,15 @@ svg {
 }
 
 .rightPanelRectangle {
-    flex-grow: 1;
     height: 93%;
     width: 77vw;
     border-radius: 20px;
     background: #e2e2e2;
-    /*padding: 30px;*/
     margin: 3vh;
     overflow: hidden;
     position: relative;
 }
 
-.rightPanelRectangle::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-}
 
 .topColumnContainer {
     display: flex;
@@ -119,6 +109,7 @@ svg {
 #HomeContainer {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 #HomeHeader {
@@ -147,8 +138,7 @@ svg {
     display: flex;
     align-items: center;
     margin: 0;
-    margin-left: 18vw;
-    margin-right: 3vw;
+    margin-right: 24vw;
 }
 
 #profile h1 {
@@ -174,6 +164,9 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
 
     
 }
@@ -181,25 +174,27 @@ svg {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 30vw;
-    width: 24vw;
+    height: 50vh;
+    width: 23vw;
     background-color: rgb(49, 49, 49);
     border-radius: 17px;
-    margin-left: 7vw;
 }
 
 
 #ObjHeader {
     color: #e2e2e2;
-    border-bottom: 0.5px solid #e2e2e2;
+    border-bottom: 0.5px solid #999999;
     width: 100%;
-    align-content: center;
+    align-content: end;
+    justify-content: space-between;
     size: 2vw;
+    display: flex;
+
 }
 
 #ObjHeader p {
-    margin-bottom: 1.5vh;
     margin-left: 2vw;
+
 }
 
 .ObjContainer {
@@ -229,3 +224,158 @@ svg {
     margin: 0;
     font-size: 0.75vw;
 }
+#HBDivider {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    gap: 8vw;
+}
+
+#Notifications {
+    display: flex;
+    padding-inline: 1.4vw;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    width: 30vw;
+    background-color: rgb(49, 49, 49);
+    border-radius: 17px;
+    color: #e2e2e2;
+}
+#rightpart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 2vw;
+}
+
+#NotifHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 2.3vw;
+
+}
+
+#NotifHeader h1 {
+    font-size: 1vw;
+    margin: 0;
+}
+#NotifHeader p {
+    font-size: 0.8vw;
+    margin: 0;
+}
+#Notifications p {
+    font-size: 0.8vw;
+    margin-top: 0.5vw;
+}
+
+#recent {
+    display: flex;
+    padding-inline: 1.4vw;
+    align-items: center;
+    flex-direction: column;
+    height: 12vh;
+    width: 30vw;
+    background-color: rgb(49, 49, 49);
+    border-radius: 17px;
+    color: #e2e2e2;
+}
+
+#recentheader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 2.3vw;
+
+}
+
+#recentheader h1 {
+    font-size: 1vw;
+    margin: 0;
+}
+#recentheader p {
+    font-size: 0.8vw;
+    margin: 0;
+}
+
+#recent p {
+    
+    font-size: 0.8vw;
+    margin-top: 0.5vw;
+}
+
+#ptasks {
+    padding-inline: 1.4vw;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 30vw;
+    background-color: rgb(49, 49, 49);
+    border-radius: 17px;
+}
+#ptasksheader {
+    color: #e2e2e2;
+    border-bottom: 0.5px solid #999999;
+    width: 100% ;
+    align-content: end;
+    justify-content: space-between;
+    size: 2vw;
+    display: flex;
+}
+
+#homefoot {
+    margin-top: 2vh;
+    padding-inline: 3vw;
+    background-color: rgb(49, 49, 49);
+    width: 100%;
+    height: 50vh;
+    color: #e2e2e2;
+}
+
+#homefoot h1{
+    font-size: 100;
+    margin: 0;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#homeprofilescontainer {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.homeprofile {
+    margin-top: 1.4vw;
+    color: rgb(49, 49, 49);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e2e2;
+    width: 7vw;
+    height: 17vh;
+    border-radius: 10px;
+}
+
+.homeprofile h3 {
+    font-size: 0.88vw;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0.2vw;
+    margin-top: 0.3vw;
+}
+
+.homeprofile p {
+    font-size: 0.8vw;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+
+

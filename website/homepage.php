@@ -44,6 +44,46 @@
                         }
                     });
                 });
+                $('#employeesButton').click(function() {
+                    $.ajax({
+                        url: 'backend/action.php',
+                        method: 'POST',
+                        data: { panel: 1 },
+                        success: function(response) {
+                            location.reload(); // Reload the page to reflect the panel change
+                        }
+                    });
+                });
+                $('#workplaceButton').click(function() {
+                    $.ajax({
+                        url: 'backend/action.php',
+                        method: 'POST',
+                        data: { panel: 2 },
+                        success: function(response) {
+                            location.reload(); // Reload the page to reflect the panel change
+                        }
+                    });
+                });
+                $('#calendarButton').click(function() {
+                    $.ajax({
+                        url: 'backend/action.php',
+                        method: 'POST',
+                        data: { panel: 3 },
+                        success: function(response) {
+                            location.reload(); // Reload the page to reflect the panel change
+                        }
+                    });
+                });
+                $('#notesButton').click(function() {
+                    $.ajax({
+                        url: 'backend/action.php',
+                        method: 'POST',
+                        data: { panel: 4 },
+                        success: function(response) {
+                            location.reload(); // Reload the page to reflect the panel change
+                        }
+                    });
+                });
                 $('#notesButton').click(function() {
                     $.ajax({
                         url: 'backend/action.php',
@@ -64,8 +104,20 @@
                 if ($panel == 0) {      
                     require "templates/homeRightPanel.php";
                 }
-                else if ($panel == 5) {
+                else if ($panel == 1) {
+                    require "templates/employeesPanel.php";
+                }
+                else if ($panel == 2) {
+                    require "templates/workplacePanel.php";
+                }
+                else if ($panel == 3) {
+                    require "templates/calendarPanel.php";
+                }
+                else if ($panel == 4) {
                     require "templates/notesPanel.php";
+                }
+                else if ($panel == 5) {
+                    require "templates/BulletinPanel.php";
                 }
             ?>
             </div>
