@@ -84,7 +84,7 @@
                         }
                     });
                 });
-                $('#notesButton').click(function() {
+                $('#bulletinButton').click(function() {
                     $.ajax({
                         url: 'backend/action.php',
                         method: 'POST',
