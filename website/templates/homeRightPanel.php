@@ -24,7 +24,7 @@
                 
                 <div id="HomeBody">
                     <div id="HBDivider">
-                        <div id="lefpart">
+                        <div id="leftpart">
                             <div class="roboto-medium" id="Objectives">
                                 <div id="ObjHeader">
                                     <p>Objectives</p>
