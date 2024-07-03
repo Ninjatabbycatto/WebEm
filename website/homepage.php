@@ -26,6 +26,7 @@
         <title>WebEM User</title>
         <link rel="stylesheet" href="css/notesPanel.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/employeesPanel.css">
         <link rel="stylesheet" href="css/Fonts/roboto.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
