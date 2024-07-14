@@ -13,8 +13,18 @@ return new class extends Migration
     {
         Schema::create('user_infos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_auth');
+            $table->boolean('type')->default(0);
+            $table->string('firstName')->nullable();
+            $table->string('lastName')->nullable();
+            $table->int('age')->nullable(); 
+            $table->string('gender')->nullable();
             $table->timestamps();
+            
+            $table->foreign('user_auth')->references('id')->on('users');
         });
+
+
     }
 
     /**

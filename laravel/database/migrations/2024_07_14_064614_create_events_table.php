@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('desc');
+            $table->unsignedBigInteger('workplace');
             $table->timestamps();
+
+            $table->foreign('workplace')->references('id')->on('workplaces');
         });
     }
 

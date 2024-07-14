@@ -14,14 +14,10 @@ return new class extends Migration
         Schema::create('workplaces', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('manager_id');
-            $table->unsignedBigInteger('team_id');
-            $table->unsignedBigInteger('announcement_id');
+            $table->unsignedBigInteger('manager');
             $table->timestamps();
 
-            //$table->foreign('manager_id')->references('id')->on('users')->onDelete('cascade');
-            //$table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
-            //$table->foreign('announcement_id')->references('id')->on('announcements')->onDelete('cascade');
+            $table->foreign('manager')->references('id')->on('user_infos');
         });
     }
 

@@ -13,7 +13,19 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user');
+            $table->unsignedBigInteger('workplace');
+            $table->unsignedBigInteger('department');
+            $table->date('startDate');
+            $table->date('endDate');
+            $table->string('title');
+            $table->longText('description');
             $table->timestamps();
+
+
+            $table->foreign('user')->references('id')->on('users');
+            $table->foreign('workplace')->references('id')->on('workplaces');
+            $table->foreign('department')->references('id')->on('depaertments');
         });
     }
 

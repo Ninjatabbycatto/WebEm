@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('description')->nullable();
+            $table->unsignedBigInteger('workplace');
             $table->timestamps();
+            
+            
+            $table->foreign('workpalce')->references('id')->on('workplaces');
         });
     }
 
