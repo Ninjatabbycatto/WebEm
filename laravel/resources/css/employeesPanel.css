@@ -1,0 +1,99 @@
+#employeesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#TeamContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 92vh;
+    border-right: solid 1px #4f4f4f;
+
+}
+
+
+#teamHeader {
+    margin: 0;
+    margin-top: 7vh;
+    border-bottom: solid 1px #4f4f4f;
+    width: 100%;
+}
+#teamHeader h1 {
+    margin-left: 2.5vw;
+    font-size: 3vw;
+}
+#teamBody {
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+}
+
+.teamperson {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 9vh;
+    gap: 1vw;
+    margin-top: 1vw;
+    width:90%;
+    border-bottom: solid 0.5px #4f4f4f;
+}
+
+.teamperson img {
+    margin-left: 3vw;
+}
+
+.teamperson h3{
+    font-size: 1vw;
+    margin: 0;
+
+}
+
+.teamperson p{
+    font-size: 0.85vw;;
+    margin: 0;
+
+}
+
+#teamProfInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#teamProfInfo #picture {
+    height: 3vw;
+    width: 3vw;
+}
+
+#profInfo {
+    display: flex;
+    gap: 1vw;
+}
+
+#detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+}
+#info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+
+}
+#profInfo p {
+    margin: 0;
+    padding: 0.6vw;
+}

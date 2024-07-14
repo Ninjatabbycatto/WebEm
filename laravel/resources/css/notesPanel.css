@@ -1,0 +1,72 @@
+.rightPanelRectangle{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.rowContainer {
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    border-right: 1px solid black; 
+    border-right-color: black;
+    border-right-width: 1px;
+}
+.rowContainer2 {
+    width: 70%;
+    height: 100%;
+    margin-left: 5%;
+
+}
+
+
+.title {
+    font-size: 4vw;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.title2 {
+    font-size: 2vw;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.titleContainer {
+    height: 5vw;
+    margin: 2vw;
+    position: relative;
+}
+
+.noteDetailContainer {
+    background-color: #cccccc;
+    padding: 0.3vw;
+    border-bottom: 1px solid black; 
+    
+
+}
+
+.noteTitle {
+    font-size: 1.2vw;
+    margin-left: 2vw;
+    
+}
+
+.noteDescription {
+    font-size: 0.9vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.actualNote {
+    font-size: 1vw;
+    margin-left: 2vw;
+    margin-right: 3vw;
+
+}
