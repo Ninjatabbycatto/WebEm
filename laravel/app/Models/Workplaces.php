@@ -8,25 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Workplaces extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'manager_id', 'team_id', 'announcement_id'];
+    protected $table = 'workplaces';
 
-    // Define relationship with User (manager)
+    protected $fillable = ['name', 'manager'];
+
+
     public function manager()
     {
-        return $this->belongsTo(User::class, 'manager_id');
+        return $this->belongsTo(UserInfo::class, 'manager');
     }
-
-    // Define relationship with Team
-
-    // add function after making each table
-    //public function team()
-    //{
-    //    return $this->belongsTo(Team::class, 'team_id');
-    //}
-//
-    //// Define relationship with Announcement
-    //public function announcement()
-    //{
-    //    return $this->belongsTo(Announcement::class, 'announcement_id');
-    //}
 }

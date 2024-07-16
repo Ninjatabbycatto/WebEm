@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamps();
             
             
-            $table->foreign('workpalce')->references('id')->on('workplaces');
+            $table->foreign('workplace')->references('id')->on('workplaces');
         });
     }
 

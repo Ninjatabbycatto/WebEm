@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->unsignedBigInteger('manager');
             $table->timestamps();
-
             $table->foreign('manager')->references('id')->on('user_infos');
         });
     }

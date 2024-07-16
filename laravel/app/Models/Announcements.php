@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Announcements extends Model
 {
     use HasFactory;
+
+    protected $table = 'announcements';
+    protected $fillable = ['title','content','isread'];
+
+    public function user() {
+        return $this->belongsTo(UserInfo::class);
+    }
+
+    public function workplace() {
+        return $this->belongsTo(Workplaces::class);        
+    }
+
 }
