@@ -13,7 +13,7 @@ class Notes extends Model
     protected $fillable = ['content', 'title'];
 
     public function owner () {
-        return $this->belongsTo(UserInfo::class);
+        return $this->belongsTo(UserInfo::class, 'users');
     }
 
 }

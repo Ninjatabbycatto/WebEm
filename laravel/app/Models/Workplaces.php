@@ -10,11 +10,17 @@ class Workplaces extends Model
     use HasFactory;
     protected $table = 'workplaces';
 
-    protected $fillable = ['name', 'manager'];
+    protected $fillable = ['name'];
 
-
-    public function manager()
+    protected $guarded = [];
+    public function users()
     {
-        return $this->belongsTo(UserInfo::class, 'manager');
+        return $this->belongsTo(UserInfo::class, 'team');
     }
+
+    public function teams()
+    {
+        return $this->hasMany(Teams::class);
+    }
+    
 }

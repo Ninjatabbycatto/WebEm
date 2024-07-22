@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Workplaces;
+use App\Models\UserInfo;
 use Illuminate\Http\Request;
 
 class WorkplacesController extends Controller
@@ -10,9 +11,12 @@ class WorkplacesController extends Controller
     /**
      * Display a listing of the resource.
      */
+    
     public function index()
     {
-        return view('workplace.index');
+        $user = UserInfo::find(1);
+
+        return view('workplace.index', ['user'=> $user],[]);
 
     }
 

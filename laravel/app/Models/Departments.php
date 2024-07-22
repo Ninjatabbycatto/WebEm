@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,7 +13,7 @@ class Departments extends Model
     protected $table = 'departments';
     protected $fillable = ['title', 'description'];
 
-    public function workplace() {
-        return $this->belongsTo(Workplaces::class);
+    public function teams() {
+        return $this->hasMany(Teams::class);
     }
 }

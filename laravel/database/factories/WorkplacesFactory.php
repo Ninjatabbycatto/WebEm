@@ -3,7 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use App\Models\UserInfo;
 use App\Models\Workplaces;
+use App\Models\Teams;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,15 +22,22 @@ class WorkplacesFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            //
+        $manager = UserInfo::factory()->create([
+            'type' => 1,  
+        ]);
 
-            'name' => $this->faker->company, // Generates a random company name
-            'manager_id' => User::factory(), // Creates a new user or references an existing one
-            'team_id' => $this->faker->numberBetween(1, 400),
-            'announcement_id' => $this->faker->numberBetween(1, 400),
-            //'team_id' => Team::factory(), // Creates a new team or references an existing one
-            //'announcement_id' => Announcement::factory(),
+        //$team = Teams::factory()->create([
+        //    'workplace' => $this->faker->unique()->numberBetween(1, 10), 
+        //]);
+
+        return [
+            'name' => $this->faker->company,
+            'manager' => $manager->id,
+            //'team_id' => $team->id,
         ];
+
     }
+    
+
+    
 }

@@ -13,16 +13,15 @@ return new class extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user');
             $table->string('role');
             $table->string('desc');
-            $table->unsignedBigInteger('workplace');
-            $table->unsignedBigInteger('department');
+            $table->foreignId('workplace')->nullable();
+            $table->foreignId('department')->nullable();
             $table->timestamps();
 
-            $table->foreign('user')->references('id')->on('users');
+            //$table->foreign('user')->references('id')->on('users');
             $table->foreign('workplace')->references('id')->on('workplaces');
-            $table->foreign('department')->references('id')->on('department');
+            $table->foreign('department')->references('id')->on('departments');
         });
     }
 

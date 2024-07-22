@@ -13,6 +13,6 @@ class Notifications extends Model
     protected $fillable = ['title','descrition'];
 
     public function user () {
-        return $this->belongsTo(UserInfo::class);
+        return $this->belongsTo(UserInfo::class, 'users');
     }
 }

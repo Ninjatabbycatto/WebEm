@@ -3,8 +3,8 @@
         <div id="HomeContainer">
             <div id = "HomeHeader">
                 <div id="HomeDates">
-                    <h1> Tuesday <br></h1>
-                    <p>November 12, 2024</p>
+                    <h1> <?php echo date('l') ?><br></h1>
+                    <p><?php echo date('F j, Y') ?></p>
                 </div>
                 <div id="profile">
                     <div id="picture">
@@ -14,7 +14,7 @@
                         </script>
                     </div>
                     <div id="texts">
-                        <h1> Juan Dela Cruz <br></h1>
+                        <h1> {{ $user->firstName }} {{ $user->lastName }} <br></h1>
                         <p>Software Developer</p>
                     </div>
                 </div>

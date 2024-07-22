@@ -17,10 +17,12 @@ return new class extends Migration
             $table->boolean('type')->default(0);
             $table->string('firstName')->nullable();
             $table->string('lastName')->nullable();
-            $table->int('age')->nullable(); 
+            $table->integer('age')->nullable(); 
             $table->string('gender')->nullable();
+            $table->unsignedBigInteger('teams')->nullable();
             $table->timestamps();
             
+             
             $table->foreign('user_auth')->references('id')->on('users');
         });
 

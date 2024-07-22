@@ -5,9 +5,17 @@
                 <div id="teamHeader">
                     <h1>Team</h1>
                 </div>
-                <div id="teamBody">
+                <div id="teamBody" >
                     <!---- put teamelements here  ---->
-                    @include('partials.teamElement')
+                    @foreach ($teams->users as $user)
+                        <a href=" {{ route('workplace.employee.profile', ['id' => $user->id])}}" class="teamperson">
+                        @include('partials.teamElement', ['user' => $user])
+                        </a>
+                        
+                    @endforeach
+                        
+
+                    
                 </div>  
             </div>
             <div id="teamProfInfo">
@@ -17,24 +25,22 @@
                         document.getElementById('profilePicture').src = 'path/to/profile-picture.jpg'; // Update the path accordingly
                     </script>
                 </div>
-                <h1> John Doe</h1>
+                <h1> {{ $disPuser->firstName}} {{ $disPuser->lastName}}</h1>
                 <div id="profInfo">
                     <div id="detail">
                         <p>Age</p>
                         <p>Gender</p>
                         <p>Department</p>
                         <p>Role</p>
-                        <p>Tasks</p>
                         <p>Email</p>
                         <p>Notes</p>
                     </div>
                     <div id="info">
-                        <p>25</p>
-                        <p>Male</p>
+                        <p>{{ $disPuser->age}}</p>
+                        <p>{{ $disPuser->gender}}</p>
                         <p>IT</p>
                         <p>back-end developer</p>
-                        <p>Not sure dito</p>
-                        <p>JDoe@comapny.ph</p>
+                        <p>{{ $disPuser->firstName}}@gmail.com</p>
                         <p>is named john doe</p>
                     </div>
     

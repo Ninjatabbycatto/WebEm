@@ -15,6 +15,6 @@ class Events extends Model
     protected $fillable = ['title', 'desc'];
 
     public function workplace() {
-        return $this->belongsTo(Workplaces::class);
+        return $this->belongsTo(Workplaces::class, 'workplaces');
     }
 }

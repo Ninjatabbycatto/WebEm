@@ -13,11 +13,11 @@ class Announcements extends Model
     protected $fillable = ['title','content','isread'];
 
     public function user() {
-        return $this->belongsTo(UserInfo::class);
+        return $this->belongsTo(UserInfo::class, 'users');
     }
 
     public function workplace() {
-        return $this->belongsTo(Workplaces::class);        
+        return $this->belongsTo(Workplaces::class, 'workplaces');        
     }
 
 }
