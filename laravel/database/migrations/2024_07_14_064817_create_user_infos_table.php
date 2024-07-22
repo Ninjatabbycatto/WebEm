@@ -20,10 +20,12 @@ return new class extends Migration
             $table->integer('age')->nullable(); 
             $table->string('gender')->nullable();
             $table->unsignedBigInteger('teams')->nullable();
+            $table->unsignedBigInteger('notes')->nullable();
             $table->timestamps();
             
              
             $table->foreign('user_auth')->references('id')->on('users');
+            $table->foreign('notes')->references('id')->on('notes');
         });
 
 

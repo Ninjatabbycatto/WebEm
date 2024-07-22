@@ -25,6 +25,11 @@ class UserInfo extends Model
         return $this->belongsToMany(Teams::class, 'user_team', 'user_info_id', 'teams_id');
     }
 
+    public function notes()
+    {
+        return $this->hasMany(Notes::class);
+    }
+
 }
 
 

@@ -12,8 +12,8 @@ class Notes extends Model
     protected $table = 'notes';
     protected $fillable = ['content', 'title'];
 
-    public function owner () {
-        return $this->belongsTo(UserInfo::class, 'users');
+    public function user_info_id () {
+        return $this->belongsTo(UserInfo::class, 'user_info_id');
     }
 
 }

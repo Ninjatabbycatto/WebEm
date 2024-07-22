@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('owner');
+            $table->unsignedBigInteger('user_info_id');
             $table->longText('content');
             $table->string('title');
             $table->timestamps();
 
-            $table->foreign('owner')->references('id')->on('users');
+            $table->foreign('user_info_id')->references('id')->on('user_infos')->onDelete('cascade');
         });
     }
 
@@ -27,6 +27,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('notes');
+        Schema::table('notes', function (Blueprint $table) {
+            $table->dropForeign(['user_info_id']);
+            $table->dropColumn('user_info_id');
+        });
     }
 };
