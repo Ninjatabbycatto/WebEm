@@ -20,6 +20,8 @@ body{
     width: 17vw;
 }
 
+
+
 .webEm-logo {
     margin: 0 auto;
     margin-top: 6vw;
@@ -32,14 +34,14 @@ body{
     height: 5.4vw;
     margin-bottom: 0.9vw;
     color: white;
-
+    
 }
 
 .centerButton {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
 }
 
 .regularpanel {
@@ -51,6 +53,9 @@ body{
     text-decoration: none;
     color: inherit;
     font-size: inherit;
+}
+.clickable-panel:hover {
+    background-color: #515151;
 }
 
 .icon {
@@ -226,6 +231,7 @@ svg {
     color: #e2e2e2;
     margin: 0;
     font-size: 1vw;
+    
 }
 
 .ObjTextContainer p{

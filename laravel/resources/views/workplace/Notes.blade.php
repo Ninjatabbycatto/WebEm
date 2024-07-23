@@ -3,22 +3,32 @@
     <div class = "rightPanelRectangle">
         <div class = "rowContainer">
             <div class='titleContainer'><h1 class = 'title'>Title</h1></div>
-            <div class='noteDetailContainer'>
-                <h1 class='noteTitle roboto-bold'>Note 1</h1>
-                <p class='noteDescription roboto-light'>Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. Curabitur  elementum neque non ligula gravida, vitae 
-                </p>
-            </div>
+            @foreach ($notes as $note)
+                <a href="{{ route('workplace.Notes.show', $note)}}" class='noteDetailContainer'>
+                    <div>
+                        <h1 class='noteTitle roboto-bold'>{{ $note->title }}</h1>
+                        <p class='noteDescription roboto-light'> {{ \Illuminate\Support\Str::limit($note->content, 75) }}</p>
+                    </div>
+                </a>
+            @endforeach
 
         </div>
         <div class = "rowContainer2">
-            <div class='titleContainer'><h1 class = 'title2'>Title</h1></div>
+            @if ($notePrev == null)
+                <h1>Please select a note</h1>
+            @else
+            <div class='titleContainer'>
+                <h1 class = 'title2'>{{ $notePrev->title }}</h1>
+            </div>
             <div class='actualNote'>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur  elementum neque non ligula gravida, vitae 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur  elementum neque non ligula gravida, vitae 
+                {{ $notePrev->content }}
                 </p>
             </div>
+
+            @endif
+        
+  
         </div>
        
     </div>

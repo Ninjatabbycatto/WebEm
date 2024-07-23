@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Workplaces;
+use App\Models\Notes;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
 
-class WorkplacesController extends Controller
+class NotesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    
     public function index()
     {
+        //
         $user = UserInfo::find(11);
+        $notes = $user->notes()->get();
+        $notePrev = $user->notes()->get()->find(1);
 
-        return view('workplace.index', ['user'=> $user],[]);
-
+        return view('Workplace.Notes', compact('user', 'notes', 'notePrev'));
     }
 
     /**
@@ -39,15 +40,20 @@ class WorkplacesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Workplaces $workplaces)
+    public function show(Notes $notePrev)
     {
-        //
+        $user = UserInfo::find(11);
+        $notes = $user->notes()->get();
+
+        return view('Workplace.Notes', compact('user', 'notes', 'notePrev'));
+        //return view('Workplace.Notes', compact('note'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Workplaces $workplaces)
+    public function edit(Notes $notes)
     {
         //
     }
@@ -55,7 +61,7 @@ class WorkplacesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Workplaces $workplaces)
+    public function update(Request $request, Notes $notes)
     {
         //
     }
@@ -63,26 +69,8 @@ class WorkplacesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Workplaces $workplaces)
+    public function destroy(Notes $notes)
     {
         //
     }
-
-    public function employees() {
-        return view('workplace.employees');
-    }
-    
-    public function workplace() {
-        return view('workplace.workplace');
-    }
-    public function calendar() {
-        return view('workplace.calendar');
-    }
-    public function notes() {
-        return view('workplace.notes');
-    }
-    public function bulletin() {
-        return view('workplace.bulletin');
-    }
-
 }

@@ -27,7 +27,7 @@ class UserInfo extends Model
 
     public function notes()
     {
-        return $this->hasMany(Notes::class);
+        return $this->hasMany(Notes::class, 'user_info_id');
     }
 
 }
