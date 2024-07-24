@@ -10,7 +10,7 @@ class Notes extends Model
     use HasFactory;
 
     protected $table = 'notes';
-    protected $fillable = ['content', 'title'];
+    protected $fillable = ['content', 'title', 'user_info_id'];
 
     public function user_info_id () {
         return $this->belongsTo(UserInfo::class, 'user_info_id');

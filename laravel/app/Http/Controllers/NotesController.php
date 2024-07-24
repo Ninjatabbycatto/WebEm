@@ -26,16 +26,28 @@ class NotesController extends Controller
      */
     public function create()
     {
-        //
+
+        $user = UserInfo::find(11);
+        $notes = $user->notes()->get();
+        $notePrev = $user->notes()->get()->find(1);
+        $newNote = 1;
+        return view('Workplace.Notes', compact('user', 'notes', 'notePrev', 'newNote'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, UserInfo $user)
     {
-        //
+        $data = $request->validate([
+            'content' => ['required', 'string'],
+            'title' => ['required', 'string']
+        ]);
+
+        $data['user_id'] = $user->id;
+        $note = Notes::create($data);
     }
+
 
     /**
      * Display the specified resource.
@@ -44,9 +56,9 @@ class NotesController extends Controller
     {
         $user = UserInfo::find(11);
         $notes = $user->notes()->get();
-
-        return view('Workplace.Notes', compact('user', 'notes', 'notePrev'));
-        //return view('Workplace.Notes', compact('note'));
+        $newNote = 0;
+        return view('Workplace.Notes', compact('user', 'notes', 'notePrev', 'newNote'));
+    
     }
 
 

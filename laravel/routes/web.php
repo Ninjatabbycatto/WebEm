@@ -15,8 +15,8 @@ Route::get('/workplace/Workplace', [WorkplacesController::class, 'workplace'])->
 //Route::get('/workplace/Workplace/[id', [WorkplacesController::class, 'workplace'])->name('workplace.Workplace');
 Route::get('/workplace/Calendar', [WorkplacesController::class, 'calendar'])->name('workplace.Calendar');
 Route::get('/workplace/Notes', [NotesController::class, 'index'])->name('workplace.Notes');
-Route::get('/workplace/notes/{notePrev?}', [NotesController::class, 'show'])->name('workplace.Notes.show');
-
+Route::get('/workplace/notes/preview/{notePrev?}', [NotesController::class, 'show'])->name('workplace.Notes.show');
+Route::get('/workplace/notes/create', [NotesController::class, 'create'])->name('workplace.Notes.create');
 
 
 Route::get('/workplace/Bulletin', [WorkplacesController::class, 'bulletin'])->name('workplace.Bulletin');
