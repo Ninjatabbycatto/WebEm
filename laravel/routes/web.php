@@ -17,6 +17,10 @@ Route::get('/workplace/Calendar', [WorkplacesController::class, 'calendar'])->na
 Route::get('/workplace/Notes', [NotesController::class, 'index'])->name('workplace.Notes');
 Route::get('/workplace/notes/preview/{notePrev?}', [NotesController::class, 'show'])->name('workplace.Notes.show');
 Route::get('/workplace/notes/create', [NotesController::class, 'create'])->name('workplace.Notes.create');
+Route::post('workplace/notes', [NotesController::class, 'store'])->name('workplace.Notes.store');
+Route::delete('workplace/notes/preview/{id?}', [NotesController::class, 'destroy'])->name('workplace.Notes.delete');
+Route::put('workplace/notes/preview/{id?}', [NotesController::class, 'update'])->name('workplace.Notes.update');
+
 
 
 Route::get('/workplace/Bulletin', [WorkplacesController::class, 'bulletin'])->name('workplace.Bulletin');

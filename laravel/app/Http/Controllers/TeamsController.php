@@ -28,7 +28,6 @@ class TeamsController extends Controller
             'teams' => $teams,
             'disPuser' => $user
         ]);
-        
     }
 
     /**
