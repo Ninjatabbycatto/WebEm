@@ -14,9 +14,7 @@ class TeamsController extends Controller
     public function index()
     {
         //
-        $userid= 11;
-        $user = UserInfo::find($userid);
-
+        $user = request()->user()->userInfo;
 
         
         //$workplace = $user->workplaces()->inRandomOrder()->first();
@@ -51,8 +49,7 @@ class TeamsController extends Controller
      */
     public function show($id)
     {
-        $userid= 11;
-        $user = UserInfo::find($userid);
+        $user = request()->user()->userInfo;
 
 
         

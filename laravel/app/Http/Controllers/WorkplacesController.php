@@ -15,6 +15,7 @@ class WorkplacesController extends Controller
     public function index()
     {
         $user = UserInfo::find(11);
+        
 
         return view('workplace.index', ['user'=> $user],[]);
 

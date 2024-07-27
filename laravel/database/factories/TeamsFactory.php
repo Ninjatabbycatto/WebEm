@@ -21,7 +21,7 @@ class TeamsFactory extends Factory
             'role' => $this->faker->word, // Adjust as needed
             'desc' => $this->faker->sentence, // Adjust as needed
             'workplace' => Workplaces::inRandomOrder()->first()?->id,
-            'department' => Departments::inRandomOrder()->first()->id,
+            //'department' => Departments::inRandomOrder()->first()->id,
         ];
     }
     public function configure() {
@@ -31,9 +31,11 @@ class TeamsFactory extends Factory
         //    $workplaces->users()->attach($userInfos);
         //});
 
+        
         return $this->afterCreating(function (Teams $teams) {
             $userInfos = UserInfo::factory()->count(10)->create();
             $teams->users()->attach($userInfos);
+
         });
         
     }

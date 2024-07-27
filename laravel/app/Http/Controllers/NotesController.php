@@ -95,7 +95,6 @@ class NotesController extends Controller
         $notePrev = $note;
         $newNote = 0;
         return view('Workplace.Notes', compact('user', 'notes', 'notePrev', 'newNote'));
-    
         
     }
 

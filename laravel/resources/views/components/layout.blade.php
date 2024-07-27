@@ -12,6 +12,9 @@
         @vite(['resources/css/app.css', 'resources/css/notesPanel.css' , 'resources/css/Fonts/roboto.css', 'resources/css/employeesPanel.css', 'resources/js/app.js'])
     </head>
     <body class="roboto-light">
+        @session('message')
+            {{session('message')}}
+        @endsession
         <div class="container">
             @include('partials.navbar')
             {{ $slot }}

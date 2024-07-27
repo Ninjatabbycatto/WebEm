@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\objectivesFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,9 +26,12 @@ class UserInfo extends Model
         return $this->belongsToMany(Teams::class, 'user_team', 'user_info_id', 'teams_id');
     }
 
-    public function notes()
-    {
+    public function notes() {
         return $this->hasMany(Notes::class, 'user_info_id');
+    }
+
+    public function objectives() {
+        return $this->hasMany(objectives::class, 'user_info_id');
     }
 
 }

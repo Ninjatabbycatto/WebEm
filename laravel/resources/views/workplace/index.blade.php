@@ -31,7 +31,13 @@
                                 </svg>
 
                             </div>
-                            
+                            <div id="objBody">
+                            @foreach ($user->objectives()->get() as $objective)
+
+                                @include('partials.objectiveItem', ['objective' => $objective])
+                            @endforeach
+
+                            </div>
                         </div>
                     </div>
                     <div id="rightpart">

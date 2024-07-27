@@ -19,12 +19,12 @@ class DepartmentsFactory extends Factory
     protected $model = Departments::class;
     public function definition(): array
     {
-
         
         return [
             //
             'title' => $this->faker->jobTitle,
             'description' => $this->faker->sentence(),
+
         ];
     }
 }

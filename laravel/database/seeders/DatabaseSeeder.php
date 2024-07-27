@@ -8,7 +8,7 @@ use App\Models\Teams;
 use App\Models\UserInfo;
 use App\Models\Departments;
 use App\Models\Notes;
-
+use App\Models\objectives;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
         Departments::factory()->count(5)->create();
         Teams::factory()->count(10)->create();
         Notes::factory()->count(3000)->create();
+        objectives::factory()->count(1000)->create();
 
         
     }

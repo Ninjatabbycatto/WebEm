@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('user_infos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_auth');
+            $table->unsignedBigInteger('user_auth')->nullable();;
             $table->boolean('type')->default(0);
             $table->string('firstName')->nullable();
             $table->string('lastName')->nullable();
@@ -21,11 +21,14 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->unsignedBigInteger('teams')->nullable();
             $table->unsignedBigInteger('notes')->nullable();
+            $table->unsignedBigInteger('objectives')->nullable();
             $table->timestamps();
             
              
             $table->foreign('user_auth')->references('id')->on('users');
             $table->foreign('notes')->references('id')->on('notes');
+            $table->foreign('objectives')->references('id')->on('objectives');
+            
         });
 
 

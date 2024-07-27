@@ -11,21 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('task', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user');
-            $table->unsignedBigInteger('workplace');
-            $table->unsignedBigInteger('department');
+            $table->unsignedBigInteger('user_info_id');
             $table->date('startDate');
             $table->date('endDate');
             $table->string('title');
             $table->longText('description');
+            $table->boolean('done');
             $table->timestamps();
 
 
-            $table->foreign('user')->references('id')->on('users');
-            $table->foreign('workplace')->references('id')->on('workplaces');
-            $table->foreign('department')->references('id')->on('departments');
+            $table->foreign('user_info_id')->references('id')->on('user_infos');
         });
     }
 
