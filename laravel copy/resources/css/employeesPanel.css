@@ -1,8 +1,7 @@
 #employeesContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    height: 100vh;
 }
 #TeamContainer {
     display: flex;
@@ -10,7 +9,7 @@
     align-items: center;
     overflow-x: hidden;
     width: 30vw;
-    height: 92vh;
+    height: 84.5vh;
     border-right: solid 1px #4f4f4f;
 
 }
@@ -40,6 +39,9 @@ html {
 
 
 #teamHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
     margin-top: 7vh;
     border-bottom: solid 1px #4f4f4f;
@@ -95,6 +97,8 @@ html {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 80%;
+    padding: 2vw;
 }
 
 #teamProfInfo #picture {
@@ -124,4 +128,60 @@ html {
 #profInfo p {
     margin: 0;
     padding: 0.6vw;
+}
+.addEmpContainer {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 4fr 5fr;
+    grid-auto-rows: minmax(5vh, auto); /* Adjust row height as needed */
+    gap: 10px; /* Optional: adjust the gap between items */
+    max-height: calc(6 * 110px); /* Adjust based on row height + gap */
+    overflow: scroll;
+    
+}
+
+
+
+.AddEmployeeContainer {
+    align-items: center;
+    height: 5vh;
+    width: 8vw;
+    padding: 0.6vw;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: solid 1px #4f4f4f;
+}
+
+.AddEmployeeContainer:hover {
+    background-color: #4f4f4f;
+    color: #e2e2e2;
+}
+
+
+#addEmployeeButton {
+    background-color: #4f4f4f;
+    color: #e2e2e2;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5vw;
+    margin-top: 5vh;
+    border-radius: 8px;
+
+}
+
+#addEmployeeButton:hover {
+    background-color: #e2e2e2;
+    color: #4f4f4f;
+    border: 2px solid #4f4f4f;
+    
+
+}
+
+#teamDropdown {
+    margin-top: 1vh;;
+    height: 3vh;
+    background: none;
+    border: none;
+    font-size: 1vw;;
+    align-items: center;
+
 }

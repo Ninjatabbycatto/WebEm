@@ -6,10 +6,25 @@
             <h1>WebEm</h1>
         </div>
         <div class="roboto-medium centerButton">
-            <p>Workplace 1</p>
-            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" strokeWidth={1} stroke="currentColor" width="10" height="10">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-            </svg>
+            @if ($user->teams()->get()->first() === NULL)
+
+                @if ($user->type == 1)
+                <a href="{{ route('workplace.Workplace')}}" style="display:flex;">
+                    <p style="font-size: 0.8vw;" class="roboto-light">Create Workplace</p>
+                    <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" strokeWidth={1} stroke="currentColor" width="10" height="10">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </a>
+                @else
+                    <p style="font-size: 0.8vw;" class="roboto-light">No Workplace</p>
+                @endif
+                   
+            @else
+                <p>{{ App\Models\Workplaces::find($user->teams()->get()->first()->id)->name }}</p>
+                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" strokeWidth={1} stroke="currentColor" width="10" height="10">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            @endif
         </div>
 
         <div>

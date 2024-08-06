@@ -20,7 +20,7 @@ class TeamsFactory extends Factory
         return [
             'role' => $this->faker->word, // Adjust as needed
             'desc' => $this->faker->sentence, // Adjust as needed
-            'workplace' => Workplaces::inRandomOrder()->first()?->id,
+            'workplace_id' => Workplaces::inRandomOrder()->first()?->id,
             //'department' => Departments::inRandomOrder()->first()->id,
         ];
     }

@@ -186,7 +186,9 @@ svg {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    
+    margin-left: 1vw;
+    margin-right: 1vw;
     
 
     
@@ -462,6 +464,84 @@ svg {
 .Bulletinheader {
    text-align: center;
 }
+
+
+#WorkplaceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 100%;
+    width: 100%
+    
+}
+
+#WorkplaceHeader {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 4fr 5fr;
+    width: auto;
+    height: 22vh;
+    width: 100%;
+    border-bottom: solid 1px black;
+    overflow: scroll;
+}
+
+.WorkplaceListItem {
+    display: flex;
+    flex-direction: column;
+    height: 4vh;
+    width: 10vw;
+    margin: 1vw;
+    margin-bottom: 0;
+    padding: 0.5vw;
+    border: solid 0.5px black;
+    border-radius: 5px;
+
+}
+
+.WorkplaceListItem  h1{
+    font-size: 0.9vw;
+}
+
+.addWorkplaceButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #515151;
+    border-radius: 50px;
+    height: 3vw;
+    width: 3vw;
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    margin: 10px;
+    margin-bottom: 65vh;
+}
+
+
+.addWorkplaceButton svg{
+    margin: 0;
+    margin: 0.6vw;
+    
+}
+
+#createUserContainer {
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+#createUserContainer h1 {
+    font-size: 3vw;
+}
+
+
+.createUserIC {
+    width: 30vw;
+}
+
 
 
 

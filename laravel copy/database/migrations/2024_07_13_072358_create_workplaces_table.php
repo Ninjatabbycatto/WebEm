@@ -15,12 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('manager');
-            $table->unsignedBigInteger('users')->nullable();
-            $table->unsignedBigInteger('team')->nullable();
+            $table->unsignedBigInteger('teams')->nullable();
             $table->timestamps();
             
             $table->foreign('manager')->references('id')->on('user_infos');
-            $table->foreign('team')->references('id')->on('teams');
+            //$table->foreign('teams')->references('id')->on('teams');
         });
     }
 

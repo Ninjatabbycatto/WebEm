@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Workplaces;
 use App\Models\UserInfo;
+use App\Models\Teams;
+use Illuminate\Database\Capsule\Manager;
 use Illuminate\Http\Request;
+use NunoMaduro\Collision\Writer;
 
 class WorkplacesController extends Controller
 {
@@ -15,12 +18,13 @@ class WorkplacesController extends Controller
     public function index()
     {
         //$user = UserInfo::find(11);
-        $user = UserInfo::query()
-            ->where('user_auth', request()->user()->id)
-            ->first();
+        //$user = UserInfo::query()
+        //    ->where('user_auth', request()->user()->id)
+        //    ->first();
 
         $user = request()->user()->userInfo;
-        return view('workplace.index', ['user'=> $user],[]);
+        $members = $user->teams()->inRandomOrder()->first();
+        return view('workplace.index', ['user'=> $user, 'members'=>$members], []);
 
     }
 
@@ -30,6 +34,9 @@ class WorkplacesController extends Controller
     public function create()
     {
         //
+        $user = request()->user()->userInfo;
+        $members = $user->teams()->inRandomOrder()->first();
+        return view('workplace.workplace', ['user'=> $user], []);
     }
 
     /**
@@ -38,6 +45,25 @@ class WorkplacesController extends Controller
     public function store(Request $request)
     {
         //
+        $user = $request->user()->userInfo;
+        $workplaceData = $request->validate([
+            'name' => ['required', 'string']
+        ]);
+        $workplaceData['manager'] = $user->id;
+        $newWorkplace = Workplaces::create($workplaceData);
+    
+        // Validate and create the team with the created workplace_id
+        $teamsData = $request->validate([
+            'role' => ['required', 'string'],
+            'desc' => ['required', 'string'],
+        ]);
+        $teamsData['workplace_id'] = $newWorkplace->id;
+        $newTeam = $user->teams()->create($teamsData);
+
+        $teams = $user->teams()->get();
+        $workplaceDisp = $newWorkplace;
+    
+        return view('workplace.workplace', ['user'=> $user, 'teams' => $teams, 'workplaceDisp' => $workplaceDisp]);
     }
 
     /**
@@ -76,10 +102,17 @@ class WorkplacesController extends Controller
         return view('workplace.employees');
     }
     
-    public function workplace() {
-        return view('workplace.workplace');
+    public function workplace($id = null) {
+        $user = request()->user()->userInfo;
+        $members = $user->teams()->inRandomOrder()->first();
+        $teams = $user->teams()->get();
+        $workplaceDisp = Workplaces::find($id);
+
+
+        return view('workplace.workplace', ['user'=> $user, 'teams' => $teams, 'workplaceDisp' => $workplaceDisp]);
     }
     public function calendar() {
+
         return view('workplace.calendar');
     }
     public function notes() {

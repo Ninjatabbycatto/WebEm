@@ -31,7 +31,8 @@
             <!-- Page Content -->
             <main>
                 <div class="container roboto-light ">
-                    @include('partials.navbar')
+                    
+                    @include('partials.navbar', ['user' => $user])
                     {{ $slot }}
                 </div>
             </main>

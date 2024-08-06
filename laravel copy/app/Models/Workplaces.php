@@ -10,13 +10,9 @@ class Workplaces extends Model
     use HasFactory;
     protected $table = 'workplaces';
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'manager', 'teams'];
 
     protected $guarded = [];
-    public function users()
-    {
-        return $this->belongsTo(UserInfo::class, 'team');
-    }
 
     public function teams()
     {

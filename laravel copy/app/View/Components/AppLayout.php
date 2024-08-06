@@ -12,6 +12,7 @@ class AppLayout extends Component
      */
     public function render(): View
     {
-        return view('layouts.app');
+        $user = request()->user()->userInfo;
+        return view('layouts.app', ['user' => $user]);
     }
 }

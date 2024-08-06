@@ -32,10 +32,15 @@
 
                             </div>
                             <div id="objBody">
-                            @foreach ($user->objectives()->get() as $objective)
+                                @if ($user->objectives === NULL)
+                                    <p style="margin: 1vw; color: rgb(222, 222, 222);"> No objectives yet</p>
 
-                                @include('partials.objectiveItem', ['objective' => $objective])
-                            @endforeach
+                                @else    
+                                    @foreach ($user->objectives()->get() as $objective)
+                                    
+                                    @include('partials.objectiveItem', ['objective' => $objective])
+                                    @endforeach
+                                @endif
 
                             </div>
                         </div>
@@ -79,8 +84,6 @@
 
             <div id="homefoot">
                 <div id="homeprofilescontainer">
-                    
-
                     
                 </div>
             </div>

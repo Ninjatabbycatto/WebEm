@@ -20,8 +20,13 @@ Route::redirect('/', 'workplace')->name('dashboard');
 
 route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/workplace/Employees', [TeamsController::class, 'index'])->name('workplace.Employees');
-    Route::get('/workplace/employees/{id}', [TeamsController::class, 'show'])->name('workplace.employee.profile');
+    Route::get('/workplace/Employees/{id}', [TeamsController::class, 'show'])->name('workplace.employee.profile');
+    Route::get('/workplace/employees/add', [TeamsController::class, 'add'])->name('workplace.employee.add');
+    Route::post('/workplace/Employees/{user}', [TeamsController::class, 'store'])->name('workplace.employee.store');
     Route::get('/workplace/Workplace', [WorkplacesController::class, 'workplace'])->name('workplace.Workplace');
+    Route::get('/workplace/Workplace/{id}', [WorkplacesController::class, 'workplace'])->name('workplace.Workplace.view');
+    Route::get('/workplace/Workplace/create', [WorkplacesController::class, 'create'])->name('workplace.Workplace.create');
+    Route::post('/workplace/Workplace', [WorkplacesController::class, 'store'])->name('workplace.Workplace.store');
     //Route::get('/workplace/Workplace/[id', [WorkplacesController::class, 'workplace'])->name('workplace.Workplace');
     Route::get('/workplace/Calendar', [WorkplacesController::class, 'calendar'])->name('workplace.Calendar');
     Route::get('/workplace/Notes', [NotesController::class, 'index'])->name('workplace.Notes');
@@ -30,7 +35,6 @@ route::middleware(['auth', 'verified'])->group(function() {
     Route::post('/workplace/notes', [NotesController::class, 'store'])->name('workplace.Notes.store');
     Route::delete('/workplace/notes/preview/{id?}', [NotesController::class, 'destroy'])->name('workplace.Notes.delete');
     Route::put('/workplace/notes/preview/{id?}', [NotesController::class, 'update'])->name('workplace.Notes.update');
-
 
     Route::get('/workplace/Bulletin', [WorkplacesController::class, 'bulletin'])->name('workplace.Bulletin');
 

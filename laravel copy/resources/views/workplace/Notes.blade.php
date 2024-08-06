@@ -22,7 +22,7 @@
         </div>
         <div class = "rowContainer2">
             @if ($newNote == 1) 
-            <form action="{{route('workplace.Notes.store', ['user' => $user->id])}}" method="POST">
+            <form action="{{route('workplace.Notes.store', ['user' => $user->id]) }}" method="POST">
                 <div class='titleContainer'>
                     @csrf
                     <div><input type="text" class="transparent-textbox roboto-black" placeholder="Title" name="title"></div>

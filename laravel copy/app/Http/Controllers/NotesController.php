@@ -90,7 +90,7 @@ class NotesController extends Controller
 
         $note = Notes::find($id);
         $note->update($data);
-        $user = UserInfo::find(11);
+        $user = request()->user()->userInfo;
         $notes = $user->notes()->get();
         $notePrev = $note;
         $newNote = 0;

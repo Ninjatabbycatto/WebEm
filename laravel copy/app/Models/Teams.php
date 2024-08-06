@@ -11,15 +11,15 @@ class Teams extends Model
 
     protected $table = 'teams';
     protected $guarded = [];
-    protected $fillable = ['role','desc'];
+    protected $fillable = ['role','desc', 'workplace_id'];
 
     public function users() {
         return $this->belongsToMany(UserInfo::class, 'user_team', 'teams_id', 'user_info_id');
         
     }
 
-    public function workplace() {
-        return $this->belongsTo(Workplaces::class, 'workplace'); 
+    public function workplace_id() {
+        return $this->belongsTo(Workplaces::class, 'workplace_id');
     }
 
     public function department() {

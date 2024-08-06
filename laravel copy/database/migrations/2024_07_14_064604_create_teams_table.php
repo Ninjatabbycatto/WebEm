@@ -15,12 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('role');
             $table->string('desc');
-            $table->foreignId('workplace')->nullable();
+            $table->foreignId('workplace_id')->constrained('workplaces')->onDelete('cascade')->nullable();
             $table->foreignId('department')->nullable();
             $table->timestamps();
 
             //$table->foreign('user')->references('id')->on('users');
-            $table->foreign('workplace')->references('id')->on('workplaces');
+
+            $table->foreign('workplace_id')->references('id')->on('workplaces');
             $table->foreign('department')->references('id')->on('departments');
         });
     }
